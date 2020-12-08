@@ -46,13 +46,13 @@ public class BlockInteraction : MonoBehaviour
 			RaycastHit hit;
 
 			//for mouse clicking
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
-			if ( Physics.Raycast (ray,out hit,20)) 
-			{
+			//Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
+			//if ( Physics.Raycast (ray,out hit,20)) 
+			//{
 
 			//for cross hairs
-			//if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 10))
-			//{
+			if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 10))
+			{
 				Chunk hitc;
 				if (!World.chunks.TryGetValue(hit.collider.gameObject.name, out hitc)) return;
 

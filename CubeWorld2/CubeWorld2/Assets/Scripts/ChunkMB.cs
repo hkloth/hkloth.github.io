@@ -41,7 +41,7 @@ public class ChunkMB : MonoBehaviour
 			yield return new WaitForSeconds(0.2f);
 			Vector3 pos = thisBlock.position;
 
-		
+		/**
 			Block blockBelow = thisBlock.GetBlock((int)pos.x, (int)pos.y - 1, (int)pos.z);
 			Block blockAbove = thisBlock.GetBlock((int)pos.x, (int)pos.y + 1, (int)pos.z);
 			Block rightBlock = thisBlock.GetBlock((int)pos.x + 1, (int)pos.y, (int)pos.z);
@@ -49,23 +49,23 @@ public class ChunkMB : MonoBehaviour
 			Block frontBlock = thisBlock.GetBlock((int)pos.x, (int)pos.y, (int)pos.z - 1);
 			Block backBlock = thisBlock.GetBlock((int)pos.x, (int)pos.y, (int)pos.z + 1);
 
-			thisBlock = thisBlock.GetBlock((int)pos.x, (int)pos.y - 1, (int)pos.z);
 			if (blockBelow.isSolid && blockAbove.isSolid && rightBlock.isSolid && leftBlock.isSolid &&
 				frontBlock.isSolid && backBlock.isSolid)
 			{
 				yield break;
 			}
-			
+			**/
 
 			//bool fallFactor = thisBlock.HasSolidNeighbour((int)pos.x, (int)pos.y, (int)pos.z);
 
 			//if (fallFactor == false)
 
-//			
-//			if (thisBlock.isSolid)
-//			{
-//				yield break;
-//			}
+			thisBlock = thisBlock.GetBlock((int)pos.x, (int)pos.y - 1, (int)pos.z);
+
+			if (thisBlock.isSolid)
+			{
+				yield break;
+			}
 		}
 	}
 
