@@ -7,6 +7,8 @@ public class BlockInteraction : MonoBehaviour
 
 	public GameObject cam;
 	Block.BlockType buildtype = Block.BlockType.STONE;
+	ChunkMB mb;
+	Block b;
 
 	// Use this for initialization
 	void Start()
@@ -28,6 +30,16 @@ public class BlockInteraction : MonoBehaviour
 			buildtype = Block.BlockType.DIRT;
 		if (Input.GetKeyDown("5"))
 			buildtype = Block.BlockType.GRASS;
+
+		if (Input.GetKeyDown(KeyCode.R))
+		{
+			mb.SelectBlock(b);
+		}
+		else if (Input.GetKeyDown(KeyCode.T))
+		{
+			//SelectEndPosition();
+			//MoveBlock();
+		}
 
 		if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
 		{
