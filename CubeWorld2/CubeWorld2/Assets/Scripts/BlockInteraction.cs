@@ -7,8 +7,6 @@ public class BlockInteraction : MonoBehaviour
 
 	public GameObject cam;
 	Block.BlockType buildtype = Block.BlockType.STONE;
-	ChunkMB mb;
-	Block b;
 
 	// Use this for initialization
 	void Start()
@@ -20,26 +18,16 @@ public class BlockInteraction : MonoBehaviour
 	void Update()
 	{
 
-		if (Input.GetKeyDown("3"))
-			buildtype = Block.BlockType.SAND;
 		if (Input.GetKeyDown("1"))
 			buildtype = Block.BlockType.STONE;
 		if (Input.GetKeyDown("2"))
 			buildtype = Block.BlockType.BEDROCK;
+		if (Input.GetKeyDown("3"))
+			buildtype = Block.BlockType.SAND;
 		if (Input.GetKeyDown("4"))
 			buildtype = Block.BlockType.DIRT;
 		if (Input.GetKeyDown("5"))
 			buildtype = Block.BlockType.GRASS;
-
-		if (Input.GetKeyDown(KeyCode.R))
-		{
-			mb.SelectBlock(b);
-		}
-		else if (Input.GetKeyDown(KeyCode.T))
-		{
-			//SelectEndPosition();
-			//MoveBlock();
-		}
 
 		if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
 		{
@@ -51,7 +39,7 @@ public class BlockInteraction : MonoBehaviour
 			//{
 
 			//for cross hairs
-			if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 10))
+			if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 20))
 			{
 				Chunk hitc;
 				if (!World.chunks.TryGetValue(hit.collider.gameObject.name, out hitc)) return;
@@ -60,7 +48,6 @@ public class BlockInteraction : MonoBehaviour
 				if (Input.GetMouseButtonDown(0))
 				{
 					hitBlock = hit.point - hit.normal / 2.0f;
-
 				}
 				else
 					hitBlock = hit.point + hit.normal / 2.0f;

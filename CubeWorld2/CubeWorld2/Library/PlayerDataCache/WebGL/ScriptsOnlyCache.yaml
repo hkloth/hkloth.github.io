@@ -27,11 +27,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -50,19 +58,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 11778}
+      Script: {instanceID: 11776}
     - Class: 114
-      Script: {instanceID: 11860}
+      Script: {instanceID: 11858}
     - Class: 114
-      Script: {instanceID: 12196}
+      Script: {instanceID: 12194}
     - Class: 114
-      Script: {instanceID: 12308}
+      Script: {instanceID: 12306}
     - Class: 114
-      Script: {instanceID: 12784}
+      Script: {instanceID: 12782}
     - Class: 114
-      Script: {instanceID: 13150}
+      Script: {instanceID: 13148}
     - Class: 114
-      Script: {instanceID: 13168}
+      Script: {instanceID: 13166}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -264,12 +272,6 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: d66f7c03535320e7a319dce64bc6ac86
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CreateQuads
-  - hash:
-      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -306,7 +308,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 89a44993c9b29de3b95b46594f142b42
+      Hash: 2ec0d3c64aec697b88eb8cd2fe0e199c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BlockInteraction

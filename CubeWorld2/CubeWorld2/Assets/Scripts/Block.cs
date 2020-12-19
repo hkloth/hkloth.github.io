@@ -94,13 +94,14 @@ public class Block
 
 	public bool BuildBlock(BlockType b)
 	{
-		if (b == BlockType.WATER)
-		{
-			owner.mb.StartCoroutine(owner.mb.Flow(this,
-										BlockType.WATER,
-										blockHealthMax[(int)BlockType.WATER], 15));
-		}
-		else if (b == BlockType.SAND)
+		//if (b == BlockType.WATER)
+		//{
+			//owner.mb.StartCoroutine(owner.mb.Flow(this,
+			//							BlockType.WATER,
+			//							blockHealthMax[(int)BlockType.WATER], 15));
+		//}
+		//else 
+		if (b == BlockType.SAND)
 		{
 			owner.mb.StartCoroutine(owner.mb.Drop(this,
 										BlockType.SAND,

@@ -121,7 +121,7 @@ public class Chunk
 
 					int surfaceHeight = Utils.GenerateHeight(worldX, worldZ);
 
-
+					//This first if statement allows for air blocks to be embedded in the base to create caves.
 					if //(Utils.fBM3D(worldX, worldY, worldZ, 0.1f, 3) < 0.42f)
 					   //chunkData[x, y, z] = new Block(Block.BlockType.AIR, pos,
 					   //			chunk.gameObject, this);
@@ -133,22 +133,22 @@ public class Chunk
 					(worldY <= Utils.GenerateStoneHeight(worldX, worldZ))
 					{
 						if (Utils.fBM3D(worldX, worldY, worldZ, 0.01f, 2) < 0.4f && worldY < 40)
-							chunkData[x, y, z] = new Block(Block.BlockType.AIR, pos, //DIAMOND
+							chunkData[x, y, z] = new Block(Block.BlockType.AIR, pos, //Originally DIAMOND
 										chunk.gameObject, this);
 						else if (Utils.fBM3D(worldX, worldY, worldZ, 0.03f, 3) < 0.41f && worldY < 20)
-							chunkData[x, y, z] = new Block(Block.BlockType.AIR, pos, //REDSTONE
+							chunkData[x, y, z] = new Block(Block.BlockType.AIR, pos, //Originally REDSTONE
 										chunk.gameObject, this);
 						else
-							chunkData[x, y, z] = new Block(Block.BlockType.AIR, pos, //STONE
+							chunkData[x, y, z] = new Block(Block.BlockType.AIR, pos, //Originally STONE
 										chunk.gameObject, this);
 					}
 					else if (worldY == surfaceHeight)
 					{
-						chunkData[x, y, z] = new Block(Block.BlockType.AIR, pos, //GRASS
+						chunkData[x, y, z] = new Block(Block.BlockType.AIR, pos, //Originally GRASS
 										chunk.gameObject, this);
 					}
 					else if (worldY < surfaceHeight)
-						chunkData[x, y, z] = new Block(Block.BlockType.AIR, pos, //DIRT
+						chunkData[x, y, z] = new Block(Block.BlockType.AIR, pos, //Originally DIRT
 										chunk.gameObject, this);
 					else
 					{
@@ -196,7 +196,6 @@ public class Chunk
 		cubeMaterial = c;
 		BuildChunk();
 	}
-
 
 	public void CombineQuads()
 	{
