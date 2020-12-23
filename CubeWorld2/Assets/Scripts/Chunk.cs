@@ -127,10 +127,10 @@ public class Chunk
 					   //			chunk.gameObject, this);
 					   //else if 
 					   (worldY == 0)
-					   chunkData[x,y,z] = new Block(Block.BlockType.DIAMOND, pos, 
-					                 chunk.gameObject, this);
-					   else if
-					(worldY <= Utils.GenerateStoneHeight(worldX, worldZ))
+						chunkData[x, y, z] = new Block(Block.BlockType.DIAMOND, pos,
+									  chunk.gameObject, this);
+					else if
+				 (worldY <= Utils.GenerateStoneHeight(worldX, worldZ))
 					{
 						if (Utils.fBM3D(worldX, worldY, worldZ, 0.01f, 2) < 0.4f && worldY < 40)
 							chunkData[x, y, z] = new Block(Block.BlockType.AIR, pos, //Originally DIAMOND

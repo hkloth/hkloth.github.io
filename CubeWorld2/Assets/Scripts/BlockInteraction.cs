@@ -32,8 +32,8 @@ public class BlockInteraction : MonoBehaviour
 			buildtype = Block.BlockType.REDSTONE;
 		if (Input.GetKeyDown("7"))
 			buildtype = Block.BlockType.GOLD;
-		if (Input.GetKeyDown("8"))
-			buildtype = Block.BlockType.WATER; //Water doesn't work completely
+				if (Input.GetKeyDown("8"))
+					buildtype = Block.BlockType.WATER; //Water doesn't work completely
 
 		if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
 		{

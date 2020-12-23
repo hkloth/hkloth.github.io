@@ -24,7 +24,7 @@ public class ChunkMB : MonoBehaviour
 		if (owner.chunkData[x, y, z].bType != Block.BlockType.AIR)
 			owner.chunkData[x, y, z].Reset();
 	}
-	
+
 	public IEnumerator Drop(Block b, Block.BlockType bt, int maxdrop)
 	{
 		Block thisBlock = b;
@@ -70,7 +70,7 @@ public class ChunkMB : MonoBehaviour
 		int x = (int)b.position.x;
 		int y = (int)b.position.y;
 		int z = (int)b.position.z;
-		
+
 		//flow down if air block beneath
 		Block below = b.GetBlock(x, y - 1, z);
 		if (below != null && below.bType == Block.BlockType.AIR)
@@ -78,28 +78,28 @@ public class ChunkMB : MonoBehaviour
 			StartCoroutine(Flow(b.GetBlock(x, y - 1, z), bt, strength, --maxsize));
 			yield break;
 		}
-/**		
-		else //flow outward
-		{
-			--strength;
-			--maxsize;
-			//flow left
-			World.queue.Run(Flow(b.GetBlock(x - 1, y, z), bt, strength, maxsize));
-			yield return new WaitForSeconds(1);
+		/**		
+				else //flow outward
+				{
+					--strength;
+					--maxsize;
+					//flow left
+					World.queue.Run(Flow(b.GetBlock(x - 1, y, z), bt, strength, maxsize));
+					yield return new WaitForSeconds(1);
 
-			//flow right
-			World.queue.Run(Flow(b.GetBlock(x + 1, y, z), bt, strength, maxsize));
-			yield return new WaitForSeconds(1);
+					//flow right
+					World.queue.Run(Flow(b.GetBlock(x + 1, y, z), bt, strength, maxsize));
+					yield return new WaitForSeconds(1);
 
-			//flow forward
-			World.queue.Run(Flow(b.GetBlock(x, y, z + 1), bt, strength, maxsize));
-			yield return new WaitForSeconds(1);
+					//flow forward
+					World.queue.Run(Flow(b.GetBlock(x, y, z + 1), bt, strength, maxsize));
+					yield return new WaitForSeconds(1);
 
-			//flow back
-			World.queue.Run(Flow(b.GetBlock(x, y, z - 1), bt, strength, maxsize));
-			yield return new WaitForSeconds(1);
-		}
-		**/
+					//flow back
+					World.queue.Run(Flow(b.GetBlock(x, y, z - 1), bt, strength, maxsize));
+					yield return new WaitForSeconds(1);
+				}
+				**/
 
 
 	}
