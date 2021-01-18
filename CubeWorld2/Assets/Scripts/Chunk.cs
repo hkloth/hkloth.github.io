@@ -79,6 +79,12 @@ public class Chunk
 		bf.Serialize(file, bd);
 		file.Close();*/
 	}
+	
+	//This does nothing at startup
+	void Start()
+    {
+		UpdateChunk();
+    }
 
 	public void UpdateChunk()
 	{
@@ -103,7 +109,9 @@ public class Chunk
 
 		chunkData = new Block[World.chunkSize, World.chunkSize, World.chunkSize];
 		for (int z = 0; z < World.chunkSize; z++)
+		{
 			for (int y = 0; y < World.chunkSize; y++)
+			{
 				for (int x = 0; x < World.chunkSize; x++)
 				{
 					Vector3 pos = new Vector3(x, y, z);
@@ -127,8 +135,102 @@ public class Chunk
 					   //			chunk.gameObject, this);
 					   //else if 
 					   (worldY == 0)
+					{ 
 						chunkData[x, y, z] = new Block(Block.BlockType.DIAMOND, pos,
 									  chunk.gameObject, this);
+
+					//Blocks that are already created in the world
+					Vector3 pos1 = new Vector3(7, 1, 11);
+					chunkData[7, 1, 11] = new Block(Block.BlockType.BLUE, pos1,
+													chunk.gameObject, this);
+					Vector3 pos2 = new Vector3(7, 2, 11);
+					chunkData[7, 2, 11] = new Block(Block.BlockType.BLUE, pos2,
+													chunk.gameObject, this);
+					Vector3 pos3 = new Vector3(9, 1, 11);
+					chunkData[9, 1, 11] = new Block(Block.BlockType.BLUE, pos3,
+													chunk.gameObject, this);
+					Vector3 pos4 = new Vector3(9, 2, 11);
+					chunkData[9, 2, 11] = new Block(Block.BlockType.BLUE, pos4,
+													chunk.gameObject, this);
+
+					Vector3 pos5 = new Vector3(7, 1, 8);
+					chunkData[7, 1, 8] = new Block(Block.BlockType.BLUE, pos5,
+													chunk.gameObject, this);
+					Vector3 pos6 = new Vector3(7, 2, 8);
+					chunkData[7, 2, 8] = new Block(Block.BlockType.BLUE, pos6,
+													chunk.gameObject, this);
+					Vector3 pos7 = new Vector3(9, 1, 8);
+					chunkData[9, 1, 8] = new Block(Block.BlockType.BLUE, pos7,
+													chunk.gameObject, this);
+					Vector3 pos8 = new Vector3(9, 2, 8);
+					chunkData[9, 2, 8] = new Block(Block.BlockType.BLUE, pos8,
+													chunk.gameObject, this);
+
+					Vector3 pos9 = new Vector3(7, 1, 4);
+					chunkData[7, 1, 4] = new Block(Block.BlockType.STONE, pos9,
+														chunk.gameObject, this);
+					Vector3 pos10 = new Vector3(7, 1, 3);
+					chunkData[7, 1, 3] = new Block(Block.BlockType.STONE, pos10,
+														chunk.gameObject, this);
+					Vector3 pos11 = new Vector3(7, 1, 2);
+					chunkData[7, 1, 2] = new Block(Block.BlockType.STONE, pos11,
+														chunk.gameObject, this);
+					Vector3 pos12 = new Vector3(7, 1, 1);
+					chunkData[7, 1, 1] = new Block(Block.BlockType.STONE, pos12,
+														chunk.gameObject, this);
+					Vector3 pos13 = new Vector3(7, 1, 0);
+					chunkData[7, 1, 0] = new Block(Block.BlockType.STONE, pos13,
+														chunk.gameObject, this);
+
+					Vector3 pos14 = new Vector3(8, 1, 4);
+					chunkData[8, 1, 4] = new Block(Block.BlockType.STONE, pos14,
+														chunk.gameObject, this);
+					Vector3 pos15 = new Vector3(8, 1, 3);
+					chunkData[8, 1, 3] = new Block(Block.BlockType.STONE, pos15,
+														chunk.gameObject, this);
+					Vector3 pos16 = new Vector3(8, 1, 2);
+					chunkData[8, 1, 2] = new Block(Block.BlockType.STONE, pos16,
+														chunk.gameObject, this);
+					Vector3 pos17 = new Vector3(8, 1, 1);
+					chunkData[8, 1, 1] = new Block(Block.BlockType.STONE, pos17,
+														chunk.gameObject, this);
+					Vector3 pos18 = new Vector3(8, 1, 0);
+					chunkData[8, 1, 0] = new Block(Block.BlockType.STONE, pos18,
+														chunk.gameObject, this);
+
+					Vector3 pos19 = new Vector3(7, 2, 4);
+					chunkData[7, 2, 4] = new Block(Block.BlockType.STONE, pos19,
+														chunk.gameObject, this);
+					Vector3 pos20 = new Vector3(7, 2, 3);
+					chunkData[7, 2, 3] = new Block(Block.BlockType.STONE, pos20,
+														chunk.gameObject, this);
+					Vector3 pos21 = new Vector3(7, 2, 2);
+					chunkData[7, 2, 2] = new Block(Block.BlockType.STONE, pos21,
+														chunk.gameObject, this);
+					Vector3 pos22 = new Vector3(7, 2, 1);
+					chunkData[7, 2, 1] = new Block(Block.BlockType.STONE, pos22,
+														chunk.gameObject, this);
+					Vector3 pos23 = new Vector3(7, 2, 0);
+					chunkData[7, 2, 0] = new Block(Block.BlockType.STONE, pos23,
+														chunk.gameObject, this);
+
+					Vector3 pos24 = new Vector3(8, 2, 4); //8 2 5
+					chunkData[8, 2, 4] = new Block(Block.BlockType.SAND, pos24,
+														chunk.gameObject, this);
+					Vector3 pos25 = new Vector3(8, 2, 3);
+					chunkData[8, 2, 3] = new Block(Block.BlockType.SAND, pos25,
+														chunk.gameObject, this);
+					Vector3 pos26 = new Vector3(8, 2, 2);
+					chunkData[8, 2, 2] = new Block(Block.BlockType.SAND, pos26,
+														chunk.gameObject, this);
+					Vector3 pos27 = new Vector3(8, 2, 1);
+					chunkData[8, 2, 1] = new Block(Block.BlockType.SAND, pos27,
+														chunk.gameObject, this);
+					Vector3 pos28 = new Vector3(8, 2, 0);
+					chunkData[8, 2, 0] = new Block(Block.BlockType.SAND, pos28,
+														chunk.gameObject, this);
+
+					}
 					else if
 				 (worldY <= Utils.GenerateStoneHeight(worldX, worldZ))
 					{
@@ -159,6 +261,9 @@ public class Chunk
 					status = ChunkStatus.DRAW;
 
 				}
+			}
+		}
+
 
 	}
 

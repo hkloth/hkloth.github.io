@@ -43,9 +43,10 @@ public class ChunkMB : MonoBehaviour
 			yield return new WaitForSeconds(0.2f);
 			Vector3 pos = thisBlock.position;
 
-			thisBlock = thisBlock.GetBlock((int)pos.x, (int)pos.y - 1, (int)pos.z);
+			thisBlock = thisBlock.GetBlock((int)pos.x, (int)pos.y, (int)pos.z + 1);
 
 			if (thisBlock.isSolid)
+//			if(pos.x == 8 && pos.y == 2 && pos.z == 5)
 			{
 				yield break;
 			}

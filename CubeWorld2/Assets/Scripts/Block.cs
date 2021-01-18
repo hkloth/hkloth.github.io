@@ -10,7 +10,7 @@ public class Block
 	public enum BlockType
 	{
 		GRASS, DIRT, WATER, STONE, SAND, GOLD, BEDROCK, REDSTONE, DIAMOND, NOCRACK,
-		CRACK1, CRACK2, CRACK3, CRACK4, AIR
+		CRACK1, CRACK2, CRACK3, CRACK4, BLUE, AIR
 	};
 
 	public BlockType bType;
@@ -21,7 +21,7 @@ public class Block
 
 	public BlockType health;
 	public int currentHealth;
-	int[] blockHealthMax = { 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0 };
+	int[] blockHealthMax = { 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0 };
 
 	Vector2[,] blockUVs = { 
 		/*GRASS TOP*/		{new Vector2( 0.125f, 0.375f ), new Vector2( 0.1875f, 0.375f),
@@ -53,7 +53,9 @@ public class Block
  		/*CRACK3*/			{ new Vector2(0.125f,0f),  new Vector2(0.1875f,0f),
  								new Vector2(0.125f,0.0625f), new Vector2(0.1875f,0.0625f)},
  		/*CRACK4*/			{ new Vector2(0.1875f,0f),  new Vector2(0.25f,0f),
- 								new Vector2(0.1875f,0.0625f), new Vector2(0.25f,0.0625f)}
+ 								new Vector2(0.1875f,0.0625f), new Vector2(0.25f,0.0625f)},
+		/*BLUE*/			{new Vector2( 0.0625f, 0.125f ), new Vector2 ( 0.125f, 0.125f ),
+								new Vector2( 0.0625f, 0.1875f), new Vector2( 0.125f, 0.1875f)}
 						};
 
 

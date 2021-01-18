@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class World : MonoBehaviour
 {
-
+	public GameObject player;
 	public Material textureAtlas;
-	public static int columnHeight = 10;
-	public static int chunkSize = 10;
+	public static int columnHeight = 13;
+	public static int chunkSize = 13;
 	public static int worldSize = 1;
 	public static int radius = 1;
 	public static Dictionary<string, Chunk> chunks;
@@ -57,12 +57,13 @@ public class World : MonoBehaviour
 			c.Value.DrawChunk();
 			yield return null;
 		}
-
+		player.SetActive(true);
 	}
 
 	// Use this for initialization
 	void Start()
 	{
+		player.SetActive(false);
 		chunks = new Dictionary<string, Chunk>();
 		this.transform.position = Vector3.zero;
 		this.transform.rotation = Quaternion.identity;
