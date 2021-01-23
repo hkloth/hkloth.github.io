@@ -45,11 +45,18 @@ public class ChunkMB : MonoBehaviour
 
 			thisBlock = thisBlock.GetBlock((int)pos.x, (int)pos.y, (int)pos.z + 1);
 
-			if (thisBlock.isSolid)
-//			if(pos.x == 8 && pos.y == 2 && pos.z == 5)
+			if(pos.x > 11 || pos.y > 11 || pos.z > 11)
 			{
 				yield break;
 			}
+			else if (pos.x < 0 || pos.y < 0 || pos.z < 0)
+            {
+				yield break;
+			}
+			else if (thisBlock.isSolid)
+            {
+				yield break;
+            }
 		}
 	}
 

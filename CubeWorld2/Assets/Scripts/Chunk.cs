@@ -138,7 +138,7 @@ public class Chunk
 					{ 
 						chunkData[x, y, z] = new Block(Block.BlockType.DIAMOND, pos,
 									  chunk.gameObject, this);
-
+						//8, 2, 12
 					//Blocks that are already created in the world
 					Vector3 pos1 = new Vector3(7, 1, 11);
 					chunkData[7, 1, 11] = new Block(Block.BlockType.BLUE, pos1,
@@ -146,10 +146,10 @@ public class Chunk
 					Vector3 pos2 = new Vector3(7, 2, 11);
 					chunkData[7, 2, 11] = new Block(Block.BlockType.BLUE, pos2,
 													chunk.gameObject, this);
-					Vector3 pos3 = new Vector3(9, 1, 11);
+					Vector3 pos3 = new Vector3(9, 1, 11);//9,1,11
 					chunkData[9, 1, 11] = new Block(Block.BlockType.BLUE, pos3,
 													chunk.gameObject, this);
-					Vector3 pos4 = new Vector3(9, 2, 11);
+					Vector3 pos4 = new Vector3(9, 2, 11);//9,2,11
 					chunkData[9, 2, 11] = new Block(Block.BlockType.BLUE, pos4,
 													chunk.gameObject, this);
 
